@@ -1,0 +1,614 @@
+/* ================= GOOGLE FONT ================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* ================= GLOBAL ================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#080808;
+    color:#fff;
+    overflow-x:hidden;
+}
+
+section{
+    padding:100px 8%;
+}
+
+.section-title{
+    text-align:center;
+    font-size:3rem;
+    font-weight:700;
+    margin-bottom:60px;
+    color:#fff;
+    position:relative;
+}
+
+.section-title::after{
+    content:'';
+    position:absolute;
+    width:100px;
+    height:4px;
+    background:#ff6b00;
+    left:50%;
+    bottom:-15px;
+    transform:translateX(-50%);
+    border-radius:10px;
+}
+
+/* ================= NAVBAR ================= */
+
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:1000;
+}
+
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+
+    background:rgba(255,255,255,0.05);
+    backdrop-filter:blur(18px);
+    border-bottom:1px solid rgba(255,255,255,0.1);
+}
+
+.logo{
+    font-size:1.6rem;
+    font-weight:700;
+    color:#ff6b00;
+}
+
+.logo i{
+    margin-right:10px;
+}
+
+.nav-links{
+    display:flex;
+    gap:35px;
+    list-style:none;
+}
+
+.nav-links a{
+    color:white;
+    text-decoration:none;
+    font-weight:500;
+    transition:.3s;
+    position:relative;
+}
+
+.nav-links a::after{
+    content:'';
+    position:absolute;
+    width:0;
+    height:2px;
+    background:#ff6b00;
+    left:0;
+    bottom:-5px;
+    transition:.4s;
+}
+
+.nav-links a:hover::after{
+    width:100%;
+}
+
+.join-btn{
+    text-decoration:none;
+    background:#ff6b00;
+    color:white;
+    padding:12px 28px;
+    border-radius:40px;
+    transition:.4s;
+}
+
+.join-btn:hover{
+    transform:translateY(-4px);
+    background:#ff8124;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    padding-top:120px;
+
+    background:
+    linear-gradient(rgba(0,0,0,.65),
+    rgba(0,0,0,.75)),
+    url("/img/muscle-muscle-bodybuilding-press-wallpaper-preview.jpg");
+
+    background-size:cover;
+    background-position:center;
+}
+
+.hero-content{
+    max-width:700px;
+}
+
+.hero h1{
+    font-size:5rem;
+    line-height:1.1;
+    margin-bottom:25px;
+    font-weight:800;
+}
+
+.hero p{
+    font-size:1.1rem;
+    color:#d5d5d5;
+    margin-bottom:40px;
+    line-height:1.8;
+}
+
+.hero-buttons{
+    display:flex;
+    gap:20px;
+}
+
+.primary-btn,
+.secondary-btn{
+    text-decoration:none;
+    padding:14px 35px;
+    border-radius:50px;
+    transition:.4s;
+}
+
+.primary-btn{
+    background:#ff6b00;
+    color:white;
+}
+
+.primary-btn:hover{
+    transform:translateY(-5px);
+}
+
+.secondary-btn{
+    border:2px solid #ff6b00;
+    color:#ff6b00;
+}
+
+.secondary-btn:hover{
+    background:#ff6b00;
+    color:white;
+}
+
+/* ================= STATS ================= */
+
+.stats{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+}
+
+.stat-card{
+    background:rgba(255,255,255,.05);
+    backdrop-filter:blur(10px);
+    border:1px solid rgba(255,255,255,.08);
+
+    padding:35px;
+    border-radius:25px;
+    text-align:center;
+
+    transition:.4s;
+}
+
+.stat-card:hover{
+    transform:translateY(-12px);
+}
+
+.stat-card h2{
+    color:#ff6b00;
+    font-size:2.8rem;
+}
+
+/* ================= PROGRAMS ================= */
+
+.program-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+}
+
+.program-card{
+    position:relative;
+    overflow:hidden;
+
+    background:rgba(255,255,255,.05);
+    backdrop-filter:blur(15px);
+
+    border-radius:25px;
+    padding:40px;
+    text-align:center;
+
+    transition:.5s;
+}
+
+.program-card i{
+    font-size:3rem;
+    color:#ff6b00;
+    margin-bottom:20px;
+}
+
+.program-card::before{
+    content:'';
+    position:absolute;
+    top:0;
+    left:-100%;
+    width:100%;
+    height:4px;
+    background:#ff6b00;
+    transition:.5s;
+}
+
+.program-card:hover::before{
+    left:0;
+}
+
+.program-card:hover{
+    transform:translateY(-12px);
+}
+
+/* ================= TRANSFORMATIONS ================= */
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:25px;
+}
+
+.gallery-card{
+    overflow:hidden;
+    border-radius:20px;
+}
+
+.gallery-card img{
+    width:100%;
+    display:block;
+    transition:.7s;
+}
+
+.gallery-card:hover img{
+    transform:scale(1.1);
+}
+
+/* ================= TRAINERS ================= */
+
+.trainer-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+}
+
+.trainer-card{
+    background:rgba(255,255,255,.05);
+    backdrop-filter:blur(15px);
+
+    padding:25px;
+    border-radius:25px;
+    text-align:center;
+
+    transition:.4s;
+}
+
+.trainer-card:hover{
+    transform:translateY(-12px);
+}
+
+.trainer-card img{
+    width:100%;
+    height:350px;
+    object-fit:cover;
+    border-radius:20px;
+    margin-bottom:20px;
+}
+
+.trainer-card h3{
+    margin-bottom:10px;
+}
+
+.trainer-card p{
+    color:#ff6b00;
+}
+/* ================= PREMIUM WORKOUT SCHEDULE ================= */
+
+.schedule{
+    position:relative;
+}
+
+.schedule-container{
+    max-width:1000px;
+    margin:auto;
+}
+
+.schedule table{
+    width:100%;
+    border-collapse:separate;
+    border-spacing:0;
+
+    background:rgba(255,255,255,0.06);
+    backdrop-filter:blur(15px);
+
+    border:1px solid rgba(255,255,255,0.08);
+    border-radius:25px;
+    overflow:hidden;
+
+    box-shadow:
+    0 20px 50px rgba(0,0,0,.4);
+}
+
+/* Header */
+
+.schedule th{
+    background:linear-gradient(
+        90deg,
+        #ff6b00,
+        #ff8c1a
+    );
+
+    color:white;
+    padding:22px;
+    font-size:1.2rem;
+    font-weight:600;
+    letter-spacing:1px;
+}
+
+/* Rows */
+
+.schedule td{
+    padding:20px;
+    text-align:center;
+    font-size:1rem;
+    border-bottom:1px solid rgba(255,255,255,.08);
+    transition:.4s;
+}
+
+/* Alternate Rows */
+
+.schedule tbody tr:nth-child(even){
+    background:rgba(255,255,255,.03);
+}
+
+/* Hover Effect */
+
+.schedule tbody tr{
+    transition:.4s;
+}
+
+.schedule tbody tr:hover{
+    transform:scale(1.02);
+    background:rgba(255,107,0,.12);
+}
+
+/* Day Column */
+
+.schedule td:first-child{
+    font-weight:700;
+    color:#ff6b00;
+}
+
+/* Workout Column */
+
+.schedule td:last-child{
+    color:#ffffff;
+}
+
+/* Last Row */
+
+.schedule tr:last-child td{
+    border-bottom:none;
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+    .schedule table{
+        font-size:.9rem;
+    }
+
+    .schedule th,
+    .schedule td{
+        padding:14px;
+    }
+}
+.schedule{
+    position:relative;
+    padding:100px 8%;
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,.85),
+        rgba(0,0,0,.90)
+    ),
+    url("/img/images.jfif");
+
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+.schedule table{
+    width:100%;
+    max-width:1000px;
+    margin:auto;
+
+    border-collapse:separate;
+    border-spacing:0;
+
+    background:rgba(15,15,15,0.75);
+    backdrop-filter:blur(20px);
+
+    border:1px solid rgba(255,107,0,0.25);
+    border-radius:25px;
+    overflow:hidden;
+
+    box-shadow:
+    0 25px 60px rgba(0,0,0,.6);
+}
+}
+/* ================= PLANS ================= */
+
+.plan-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+}
+
+.plan-card{
+    text-align:center;
+    padding:40px;
+    border-radius:25px;
+
+    background:rgba(255,255,255,.05);
+    backdrop-filter:blur(15px);
+
+    transition:.4s;
+}
+
+.plan-card:hover{
+    transform:translateY(-12px);
+}
+
+.featured{
+    border:2px solid #ff6b00;
+    transform:scale(1.05);
+}
+
+.plan-card h1{
+    color:#ff6b00;
+    font-size:3rem;
+    margin:20px 0;
+}
+
+.plan-card button{
+    margin-top:25px;
+    border:none;
+    background:#ff6b00;
+    color:white;
+    padding:12px 30px;
+    border-radius:40px;
+    cursor:pointer;
+}
+
+/* ================= TESTIMONIALS ================= */
+
+.testimonial-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:25px;
+}
+
+.testimonial-card{
+    padding:35px;
+    border-radius:25px;
+
+    background:rgba(255,255,255,.05);
+    backdrop-filter:blur(15px);
+}
+
+.testimonial-card h4{
+    color:#ff6b00;
+    margin-top:20px;
+}
+
+/* ================= CONTACT ================= */
+
+form{
+    max-width:700px;
+    margin:auto;
+}
+
+input,
+textarea{
+    width:100%;
+    padding:18px;
+    margin-bottom:20px;
+
+    background:rgba(255,255,255,.05);
+    border:none;
+    border-radius:15px;
+    color:white;
+}
+
+form button{
+    width:100%;
+    padding:18px;
+    border:none;
+    border-radius:15px;
+    background:#ff6b00;
+    color:white;
+    cursor:pointer;
+}
+.contact{
+    position:relative;
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,.85),
+        rgba(0,0,0,.92)
+    ),
+    url("/img/Gym-interior.webp");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+    text-align:center;
+    padding:50px 8%;
+    border-top:1px solid rgba(255,255,255,.08);
+}
+
+.socials{
+    margin:25px 0;
+}
+
+.socials i{
+    font-size:1.5rem;
+    margin:0 15px;
+    color:#ff6b00;
+    transition:.4s;
+    cursor:pointer;
+}
+
+.socials i:hover{
+    transform:translateY(-5px);
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:768px){
+
+    .hero h1{
+        font-size:3rem;
+    }
+
+    .navbar{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    .nav-links{
+        gap:15px;
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .hero-buttons{
+        flex-direction:column;
+    }
+}
